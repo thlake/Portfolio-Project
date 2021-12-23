@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import './node_modules/bootstrap/scss/bootstrap.scss';
+
+h1 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    padding-top: 20px;
+};
+
+html {
+    background-color: rgb(219, 226, 226);
+};
+
+body{
+    background-color: rgb(219, 226, 226);
+};
+
+.navbar-brand {
+    margin-left: 20px;
+};
+
+.forms {
+    margin-top: 35px;
+};
+
+input {
+    margin-bottom: 10px;
+};
+
+.welcome {
+    margin-left: 400px;
+    margin-top: 100px;
+    height: 350px;
+    width: 50%;
+    background-color: powderblue;
+    text-indent: 70px;
+    padding: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+};
+
+.welcome2 {
+    margin-top: 30px;
+    margin-left: 750px;
+    height: 370px;
+    width: 50%;
+    background-color: powderblue;
+    text-indent: 70px;
+    padding: 60px
+};
+
+.btn:hover{
+    background: white;
+    border: 1px solid;
+    color: black;
+};
+
+.invalid-feedback{
+    padding-bottom: 15px;
+};

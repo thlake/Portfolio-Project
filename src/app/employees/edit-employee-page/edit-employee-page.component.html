@@ -1,0 +1,171 @@
+<div class="container">
+    <h1>Edit Employee</h1>
+    <form [formGroup]="editEmployeeForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <div class="innerFormContainer"> 
+            <div class="form-group">
+                <div class="row">
+                <div class="col-md-2">
+                        <label for="firstName" class="form-label">First Name</label>
+                </div>
+                <div class="col-sm-8">
+                        <input class="form-control" id="firstName" type="text" formControlName="firstName"
+                            name="firstName" [ngClass]="{'is-invalid':formErrors.firstName}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.firstName}}
+                        </div>
+                </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="lastName" class="form-label">Last Name</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="lastName" type="text" formControlName="lastName"
+                            name="lastName" [ngClass]="{'is-invalid':formErrors.lastName}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.lastName}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="email" class="form-label">Email</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="email" type="text" formControlName="email"
+                            name="email" ngModel [email]="true" [ngClass]="{'is-invalid':formErrors.email}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.email}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="ssn" class="form-label">Ssn</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="ssn" type="text" formControlName="ssn"
+                            name="ssn" [ngClass]="{'is-invalid':formErrors.ssn}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.ssn}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="age" class="form-label">Age</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="age" type="text" formControlName="age"
+                            name="age" [ngClass]="{'is-invalid':formErrors.age}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.age}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="height" class="form-label">Height</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="height" type="text" formControlName="height"
+                            name="height" [ngClass]="{'is-invalid':formErrors.height}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.height}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="weight" class="form-label">Weight</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="weight" type="text" formControlName="weight"
+                            name="weight" [ngClass]="{'is-invalid':formErrors.weight}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.weight}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="gender" class="form-label">Gender</label>
+                    </div>
+                    <div class="col-sm-8">
+                        <input class="form-control" id="gender" type="text" formControlName="gender"
+                            name="gender"[ngClass]="{'is-invalid':formErrors.gender}">
+                        <div class="invalid-feedback" >
+                            {{formErrors.gender}}
+                        </div>
+                    </div>
+                </div>
+
+                <form formGroupName="address">
+                    <div class="addressContainer">
+                        <h2>Address</h2>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="street" class="form-label">Street</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="street" type="text" formControlName="street"
+                                    name="street" [ngClass]="{'is-invalid':formErrors.street}">
+                                <div class="invalid-feedback" >
+                                    {{formErrors.gender}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="city" class="form-label">City</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="city" type="text" formControlName="city"
+                                name ="city" [ngClass]="{'is-invalid':formErrors.city}">
+                                <div class="invalid-feedback" >
+                                    {{formErrors.city}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="state" class="form-label">State</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="state" type="text" formControlName="state"
+                                name="state" [ngClass]="{'is-invalid':formErrors.state}">
+                                <div class="invalid-feedback" >
+                                    {{formErrors.state}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label for="postal" class="form-label">Postal</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="postal" type="text" formControlName="postal"
+                                name="postal" [ngClass]="{'is-invalid':formErrors.postal}">
+                                <div class="invalid-feedback" >
+                                    {{formErrors.postal}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button (click)="onSubmit()" type="button" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+</div>
+

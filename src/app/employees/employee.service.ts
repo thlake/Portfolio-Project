@@ -1,0 +1,46 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
+import { Employee } from './employee';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EmployeeService {
+
+  private baseURL = "http://localhost:8080/api/v1/";
+  private secondURL = "http://localhost:8080/api/v1/employee"
+  currentEmployee: Employee;
+  
+
+  constructor(private httpClient: HttpClient) { }
+
+
+  // setCurrentEmployee( employee: Employee) {
+  //   this.currentEmployee = employee;
+  // }
+
+  getCurrentEmployee( ) {
+    return this.currentEmployee;
+  }
+
+  getEmployees(): Observable<Employee[]>{
+    return this.httpClient.get<Employee[]>(`${this.baseURL + "employees"}`);
+  }
+
+  getEmployeeById(id: number): Observable<Employee> {
+    return this.httpClient.get<Employee>(`${this.baseURL + "employees/" + id}`);
+  }
+
+  updateEmployeeById(id: number, employee: Employee): Observable<Object> {
+    return this.httpClient.put(`${this.secondURL}/${id}`, employee);
+  }
+
+  addEmployee(employee: Employee): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL + "employees"}`, employee);
+  }
+
+  deleteEmployee(id: number): Observable<Object> {
+    return this.httpClient.delete(`${this.baseURL + "employees/" + id}`);
+  }
+}

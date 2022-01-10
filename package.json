@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build mv dist/portfolio-project _static",
+    "build": "ng build --prod && mv dist/portfolio-project _static",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "preinstall": "npx npm-force-resolutions"

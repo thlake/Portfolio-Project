@@ -9,8 +9,8 @@ import {environment} from '../../environments/environment';
 })
 export class EmployeeService {
 
-  private baseURL = environment.API_HOST + "/api/v1/";
-  private secondURL = environment.API_HOST + "/api/v1/employee"
+  private baseURL = environment.API_URL + "/api/v1/";
+  private secondURL = environment.API_URL + "/api/v1/employee"
   currentEmployee: Employee;
   
 

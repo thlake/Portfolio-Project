@@ -13,13 +13,7 @@ export class EmployeeService {
   private secondURL = environment.API_URL + "/api/v1/employee"
   currentEmployee: Employee;
   
-
   constructor(private httpClient: HttpClient) { }
-
-
-  // setCurrentEmployee( employee: Employee) {
-  //   this.currentEmployee = employee;
-  // }
 
   getCurrentEmployee( ) {
     return this.currentEmployee;

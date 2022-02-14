@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { EmployeesModule } from './employees/employees.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { EmployeesModule } from './employees/employees.module';
     FormsModule,
     ReactiveFormsModule,
     StoreDevtoolsModule.instrument(),
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({}, {}),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
